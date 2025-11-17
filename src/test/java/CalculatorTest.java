@@ -42,4 +42,18 @@ public class CalculatorTest {
         assertEquals("Value Out Of Range", ex.getMessage());
     }
 
+    /** MULTIPLY TEST **/
+    @Test
+    public void testMul_Success()
+    {
+        assertEquals(20, calc.mul(5,4));
+    }
+
+    @Test
+    public void testMul_Fail()
+    {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.mul(Integer.MAX_VALUE, 1));
+        assertEquals("Value Out Of Range", ex.getMessage());
+    }
+
 }
