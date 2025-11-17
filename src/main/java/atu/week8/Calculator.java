@@ -28,4 +28,12 @@ public class Calculator {
         return firstNum * secondNum;
     }
 
+    public int div(int firstNum, int secondNum)
+    {
+        if(firstNum == Integer.MIN_VALUE || secondNum == Integer.MIN_VALUE)
+        {
+            throw new ArithmeticException("Cannot Divide By Zero");
+        }
+        return firstNum / secondNum;
+    }
 }

@@ -56,4 +56,17 @@ public class CalculatorTest {
         assertEquals("Value Out Of Range", ex.getMessage());
     }
 
+    /** DIVIDE TEST **/
+    @Test
+    public void testDiv_Success()
+    {
+        assertEquals(20, calc.div(100,5));
+    }
+
+    @Test
+    public void testDiv_Fail()
+    {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.div(Integer.MIN_VALUE, 0));
+        assertEquals("Cannot Divide By Zero", ex.getMessage());
+    }
 }
