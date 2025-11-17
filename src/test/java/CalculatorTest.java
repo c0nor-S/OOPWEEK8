@@ -28,4 +28,18 @@ public class CalculatorTest {
         assertEquals("Value Out Of Range", ex.getMessage());
     }
 
+    /** SUBTRACT TEST **/
+    @Test
+    public void testSub_Success()
+    {
+        assertEquals(20, calc.sub(26,6));
+    }
+
+    @Test
+    public void testSub_Fail()
+    {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.sub(Integer.MIN_VALUE, 1));
+        assertEquals("Value Out Of Range", ex.getMessage());
+    }
+
 }
