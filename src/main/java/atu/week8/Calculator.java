@@ -19,5 +19,13 @@ public class Calculator {
         return firstNum - secondNum;
     }
 
+    public int mul(int firstNum, int secondNum)
+    {
+        if(firstNum == Integer.MAX_VALUE || secondNum == Integer.MAX_VALUE)
+        {
+            throw new ArithmeticException("Value Out Of Range");
+        }
+        return firstNum * secondNum;
+    }
 
 }
